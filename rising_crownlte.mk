@@ -12,13 +12,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 $(call inherit-product, device/samsung/crownlte/device.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/rising/config/common_full_phone.mk)
 
 # Device identifier, this must come after all inclusions
-PRODUCT_NAME := lineage_crownlte
+PRODUCT_NAME := rising_crownlte
 PRODUCT_DEVICE := crownlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-N960F
 PRODUCT_MANUFACTURER := samsung
+
+# Maintainer Name
+INFINITY_MAINTAINER := "OmniZealus"
+
+# Whether the device supports Fingerprint On Display
+TARGET_HAS_UDFPS := false
+
+# Whether Including Google Apps
+WITH_GAPPS := false 
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
